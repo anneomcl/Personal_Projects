@@ -1,0 +1,26 @@
+you need to make the input form!
+:)
+we'll walk through jquery to start off with
+when creating the form, really think about how the js will hook into it
+for example, each form element should have an ID for the js to access
+and you should use classes for the css access points
+the idea is to structure the html in a way that makes sense
+look at bootstrap's horizontal form
+they have a great demo
+you need 2 inputs: weight, miles driven
+so both will look something like:
+<input id="weight" class="weight" value="180" ... />
+js uses the id field to get data from the form
+we'll do that later
+css uses class fields
+.weight { color: red
+}
+the idea is to structure the form well, so that its easy to interact with
+the way to think about it is not in terms of js / css / html
+but in terms of an ideal structure
+I want a weight/driving calculator
+it has the 'calculator' wrapper
+with a 'caculator-weight' and calcualtor-driving components
+I prepent 'calculator' for namespacing issues in js / css
+so everyting in the module is caculator-...
+ie class="calculator-weight"
