@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+		<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    </head>
+    
+    <body>
+        <!-- Right below is an image of the sun -->
+        <img id="sun" src="http://solarsystem.nasa.gov/multimedia/gallery/PIA03149.jpg">
+        
+        <!-- Insert the 'earth' on the next line -->
+	<div id="earth-orbit">
+            
+      </div>
+	  
+
+	<script>
+		var dataRef = new Firebase("https://glowing-fire-4366.firebaseio.com");
+		var i=9;
+		
+		while(i<15){
+			dataRef.child("users").push("I am now"+i+ "data into Firebase!");
+			i++;
+		}
+		//window.location.search="hi_my_name_is_rev";
+		console.log(window.location.href.split("?")[1])
+		window.location.href = "results.html?fjdksjfkldsjfklsdjfdsk"
+	</script>
+
+	
+    </body>
+</html>

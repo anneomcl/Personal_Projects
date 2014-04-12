@@ -4,6 +4,39 @@
    Author's custom styles
    ========================================================================== */
 
+   /* --------- */
+   
+   
+.header {
+  overflow: hidden;
+  padding: 5px;
+  background: #FFFFFF;
+}
+
+.header .section {
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+.header button {
+  display: block;
+  margin: 0 10px 0px 0;
+  background-color: orange;
+  border: orange;
+  font-family: helvetica;
+  color: white;
+  float: left;
+}
+
+.header .label {
+  margin: 0 0 10px 0;
+}
+/* --------- */
+.results {
+  padding: 10px;
+  text-align: center;
+}
+
 
 body {
 	background-color: orange

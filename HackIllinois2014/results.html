@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+		<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" type="text/css" href="../lib/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../utils/rdio-utils.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="css/style.css" />
+    <script src="https://www.rdio.com/api/api.js?client_id=Qu1HAaX9X4qMn3JP2MMUrw"></script>
+
+
+    <script src="../lib/jquery-1.9.1.min.js"></script>
+    <script src="../lib/modernizr.touch.js"></script>
+    <script src="../lib/underscore-1.4.4.min.js"></script>
+    <script src="../utils/rdio-utils.js"></script>
+    <script src="js/main.js"></script>
+    </head>
+	
+  <body>
+    
+	
+    <div class="results"></div>
+			<div class='image' >
+			<div class="animate">
+				 <h2 id='myHtml' class="hiThere"></h2>
+				 <div style= "color: orange; position: absolute; top: 100%; font-size:10; padding:0px;" class="header">
+				<div class="section">
+					<button class="play">play</button>
+					<button class="next">next</button>
+					<button class="prev">previous</button>
+				<!--<div style = "float:center;" class="album-title label"></div>
+				<div style = "float:center;" class="artist label"></div>-->
+				<div class="track label"></div>
+			</div>
+    </div>
+			</div>
+						<img id='image2' class='hihi' src='http://www.nasa.gov/images/content/508910main_KOI-72-STILL-6k-3_full_full.jpg' >
+	</div>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script>
+	var key=getRandomArbitrary(1,5);
+	var key2=getRandomArbitrary(1,5);
+	var type="Hope";
+	
+	//document.write(key);
+	
+	var source="https://glowing-fire-4366.firebaseio.com/images/"+type+"/"+key;
+	var quoteSource="https://glowing-fire-4366.firebaseio.com/quotes/"+key2;
+	//document.write(source+"<br>");
+	
+	var dataRef = new Firebase(source);
+	var dataRefQuote=new Firebase(quoteSource);
+	
+	var image;
+	dataRef.on('value', function(snapshot) {
+		//alert('fred’s first name is ' + snapshot.val());
+		image=snapshot.val();
+		//document.write(image);
+		document.getElementById("image2").src = image;  
+
+	});
+	
+		dataRefQuote.on('value', function(snapshot) {
+		//alert('fred’s first name is ' + snapshot.val());
+		text="default"
+		text=snapshot.val();
+		//document.write(image);
+		document.getElementById("myHtml").innerHTML= text;  
+
+	});
+	
+
+	
+	//document.getElementById("myHtml").innerHTML = "my name is TIM";  
+		
+		
+		/*
+		function GetUrlValue(VarSearch){
+		var SearchString = window.location.search.substring(1);
+		var VariableArray = SearchString.split('&');
+		for(var i = 0; i < VariableArray.length; i++){
+			var KeyValuePair = VariableArray[i].split('=');
+			if(KeyValuePair[0] == VarSearch){
+				return KeyValuePair[1];
+				}
+			}
+		}*/
+		R.ready(function() {
+			var shuffle = R.player.shuffle(); // gets
+			R.player.shuffle(true); // sets
+			R.player.play({source: "p8899192"}); 
+		});
+		
+		function getRandomArbitrary(min, max) {
+			return Math.floor(Math.random() * (max+1 - min) + min);
+		}
+		
+	</script>
+
+    </body>
+</html>
