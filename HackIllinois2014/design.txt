@@ -1,0 +1,71 @@
+
+
+General Design of inspire.me
+
+Homepage:
+header: logo
+
+button: inspire me
+
+P1:
+
+I am...
+
+options:
+1. stressed
+2. unmotivated
+3. unconfident
+4. (just a bit down)
+
+(1) TAGS
+http://files.customize.org/download/wallpapers/49616/44991/The_Greenway-1600x1200.jpg
+
+We must let go of the life we have planned, so as to accept the one that is waiting for us.
+Joseph Campbell 
+
+“Tension is who you think you should be. Relaxation is who you are.”
+-Chinese Proverb
+
+“I took a deep breath and listened to the old bray of my heart. I am. I am. I am.”
+-Sylvia Plath
+
+"Stress is like spice - in the right proportion it enhances the flavor of a dish. Too little produces a bland, dull meal; too much may choke you."
+~Donald Tubesing
+
+(2) TAGS
+
+http://sciencelakes.com/data_images/out/19/8829438-volcano-wallpaper-hd.jpg
+
+“Do you want to know who you are? Don't ask. Act! Action will delineate and define you.” 
+― Thomas Jefferson
+
+“Ultimately, man should not ask what the meaning of his life is, but rather must recognize that it is he who is asked. In a word, each man is questioned by life; and he can only answer to life by answering for his own life; to life he can only respond by being responsible.” 
+― Viktor E. Frankl, Man's Search for Meaning
+
+Take up one idea. Make that one idea your life - think of it, dream of it, live on that idea. Let the brain, muscles, nerves, every part of your body, be full of that idea, and just leave every other idea alone. This is the way to success. ~Swami Vivekananda
+
+I have not failed. I've just found 10,000 ways that won't work. ~Thomas A. Edison
+
+ Life is not about finding yourself. Life is about creating yourself. ~Lolly Daskal
+
+(3) TAGS
+
+“How many cares one loses when one decides not to be something but to be someone.”
+-Gabrielle “Coco” Chanel (3)
+
+“Wanting to be someone else is a waste of the person you are.” 
+― Marilyn Monroe
+
+“Never be bullied into silence. Never allow yourself to be made a victim. Accept no one's definition of your life, but define yourself.” 
+― Harvey Fierstein
+
+“You yourself, as much as anybody in the entire universe, deserve your love and affection” 
+― Gautama Buddha
+
+“One's dignity may be assaulted, vandalized and cruelly mocked, but it can never be taken away unless it is surrendered.” 
+― Michael J. Fox
+
+(4) TAGS
+
+
+

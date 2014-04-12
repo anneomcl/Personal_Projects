@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
+	</head>
+
+	<body>
+		<script>
+			var myDataRef = new Firebase('https://sweltering-fire-5483.firebaseio.com/');
+			dataRef.set("I am now writing data into Firebase!");
+			$('#messageInput').keypress(function (e) {
+			if (e.keyCode == 13) {
+				var name = $('#nameInput').val();
+				var text = $('#messageInput').val();
+				myDataRef.push({name: name, text: text});
+			$('#messageInput').val('');
+        }
+      });
+
+		</script>
+	</body>
+</html>
