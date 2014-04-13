@@ -1,0 +1,110 @@
+body, html{
+padding:0;
+margin:0;
+}
+
+#red {
+	position:absolute;
+    height:100%;
+    width:100%;
+    background-color:#FF0000;
+}
+
+#blue {
+    height:100%;
+    width:100%;
+
+    background-color:#0000FF;
+}
+#redCont{
+	position:absolute;
+    top:38%;
+    left:39%;
+	width:100%
+
+}
+#redCont1, #redCont2, #redCont3, #redCont4{
+   position: relative; 
+   top: 35%; 
+     left:39%;
+	width:100%
+
+
+}
+
+#redText{
+   position: absolute; 
+   top: 30%; 
+	width:100%
+   text-align: center;
+   
+   color: white; 
+   font: bold 50px/50px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+.text1,.text2,.text3,.text4{
+   position: absolute; 
+   top: 30%; 
+	width:100%
+   text-align: center;
+   
+   color: white; 
+  font: bold 25px/25px Helvetica, Sans-Serif;  
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+#inspireMe {
+    height:100%;
+    width:100%;
+
+}
+
+#yellow {
+    height:100%;
+    width:100%;
+
+    background-color:#E2BE22;
+}
+
+#green {
+    height:100%;
+    width:100%;
+
+    background-color:#008800;
+}
+#pink {
+    height:100%;
+    width:100%;
+
+    background-color: pink;
+}
+#dtable1 {
+padding:0;
+margin:0;
+border:none;
+border-collapse: collapse;
+    height:100%;
+    width:100%;
+	position:absolute;
+	display:none;
+background-color:black;
+	
+}
+#table1 {
+padding:0;
+margin:0;
+border:none;
+border-collapse: collapse;
+    height:100%;
+    width:100%;
+	position:absolute;
+
+	
+}

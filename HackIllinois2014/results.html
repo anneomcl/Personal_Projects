@@ -46,6 +46,7 @@
 				<div style = "float:center;" class="artist label"></div>-->
 				<br><br>
 				<div class="track label" style="width:100%"></div>
+				<div style = "font-size: 7;"> Powered by Rdio</div>
 				</div>
     </div>
 	
@@ -72,17 +73,18 @@
 	<script>
 	var key=getRandomArbitrary(1,5);
 	var key2=getRandomArbitrary(1,5);
-	var type="Calm";
-	var type2="Calm";
-	
+	var type="Motivate";//GetUrlValue("typeName");
+	var square = "NW"//GetUrlValue("square");
 	//document.write(key);
 	
-	var source="https://glowing-fire-4366.firebaseio.com/images/"+type+"/"+key;
-	var quoteSource="https://glowing-fire-4366.firebaseio.com/quotes/"+type2+"/"+key2;
+	var source="https://glowing-fire-4366.firebaseio.com/images/"+type+"/"+key; // type/key
+	var quoteSource="https://glowing-fire-4366.firebaseio.com/quotes/"+type+"/"+square+"/"+key2; // type/square/key
+	var musicSource="https://glowing-fire-4366.firebaseio.com/playlists/"+type;
 	//document.write(source+"<br>");
 	
 	var dataRef = new Firebase(source);
 	var dataRefQuote=new Firebase(quoteSource);
+	var dataRefPlaylist = new Firebase(musicSource);
 	
 	var image;
 	dataRef.on('value', function(snapshot) {
@@ -93,7 +95,7 @@
 
 	});
 	
-		dataRefQuote.on('value', function(snapshot) {
+	dataRefQuote.on('value', function(snapshot) {
 		//alert('fred’s first name is ' + snapshot.val());
 		text="default"
 		text=snapshot.val();
@@ -102,12 +104,17 @@
 
 	});
 	
+	var playlistKey;
+	dataRefPlaylist.on('value', function(snapshot) {
+		playlistKey = snapshot.val();
+	});
+	
 
 	
 	//document.getElementById("myHtml").innerHTML = "my name is TIM";  
 		
 		
-		/*
+		
 		function GetUrlValue(VarSearch){
 		var SearchString = window.location.search.substring(1);
 		var VariableArray = SearchString.split('&');
@@ -117,11 +124,12 @@
 				return KeyValuePair[1];
 				}
 			}
-		}*/
+		}
+		
 		R.ready(function() {
 			var shuffle = R.player.shuffle(); // gets
 			R.player.shuffle(true); // sets
-			R.player.play({source: "p8899192"}); 
+			R.player.play({source: playlistKey}); 
 		});
 		
 		function getRandomArbitrary(min, max) {
