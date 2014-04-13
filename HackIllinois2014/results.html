@@ -73,17 +73,19 @@
 	<script>
 	var key=getRandomArbitrary(1,5);
 	var key2=getRandomArbitrary(1,5);
-	var type="Motivate";//GetUrlValue("typeName");
-	var square = "NW"//GetUrlValue("square");
+	var type= GetUrlValue("typeName");
+	var square = GetUrlValue("square");
 	//document.write(key);
 	
 	var source="https://glowing-fire-4366.firebaseio.com/images/"+type+"/"+key; // type/key
 	var quoteSource="https://glowing-fire-4366.firebaseio.com/quotes/"+type+"/"+square+"/"+key2; // type/square/key
+	var quoteSource2="https://glowing-fire-4366.firebaseio.com/quotes/"+type+"/"+square+"/"+key2; // type/square/key
 	var musicSource="https://glowing-fire-4366.firebaseio.com/playlists/"+type;
 	//document.write(source+"<br>");
 	
 	var dataRef = new Firebase(source);
 	var dataRefQuote=new Firebase(quoteSource);
+	var dataRefQuote2=new Firebase(quoteSource);
 	var dataRefPlaylist = new Firebase(musicSource);
 	
 	var image;
@@ -95,6 +97,30 @@
 
 	});
 	
+	
+	
+	var animateTruck= function(){
+		
+		key2=getRandomArbitrary(1,5);
+		quoteSource="https://glowing-fire-4366.firebaseio.com/quotes/"+type+"/"+square+"/"+key2; // type/square/key
+		dataRefQuote=new Firebase(quoteSource);
+		
+			dataRefQuote.once('value', function(snapshot) {
+		//alert('fred’s first name is ' + snapshot.val());
+		
+		//document.write(image);
+		$("#myHtml").text(snapshot.val()).fadeIn(1000);
+
+	});
+	
+		$("#myHtml").animate({color: "white"}, 10000, function(){animateTruck();});
+	};
+	
+	animateTruck();
+	
+	
+	
+	/*
 	dataRefQuote.on('value', function(snapshot) {
 		//alert('fred’s first name is ' + snapshot.val());
 		text="default"
@@ -103,6 +129,7 @@
 		document.getElementById("myHtml").innerHTML= text;  
 
 	});
+	*/
 	
 	var playlistKey;
 	dataRefPlaylist.on('value', function(snapshot) {
