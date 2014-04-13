@@ -10,7 +10,6 @@
 .header {
   overflow: hidden;
   padding: 5px;
-  background: #FFFFFF;
 }
 
 .header .section {
@@ -21,10 +20,10 @@
 .header button {
   display: block;
   margin: 0 10px 0px 0;
-  background-color: orange;
-  border: orange;
+  background-color: white;
+  border: white;
   font-family: helvetica;
-  color: white;
+  color: black;
   float: left;
 }
 
@@ -38,8 +37,11 @@
 }
 
 
-body {
-	background-color: orange
+html, body {
+	padding:0;
+	margin:0;
+	height: 100%
+	width: 100%
 }
 
 

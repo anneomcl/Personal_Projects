@@ -21,22 +21,37 @@
   <body>
     
 	
-    <div class="results"></div>
-			<div class='image' >
+   
+			<div class='image'>
 			<div class="animate">
+				
+				 <div style= "width:100%; opacity: .75; background-color: black; position: absolute; top: 50%; font-size:10; padding:0px; color:white;">
 				 <h2 id='myHtml' class="hiThere"></h2>
-				 <div style= "color: orange; position: absolute; top: 100%; font-size:10; padding:0px;" class="header">
-				<div class="section">
+				 
+		<!--		<script> 
+		
+					$("#thisOne").click(function(){
+						var myText=document.getElementById("thisOne").innerHTML;
+						alert(myText);
+					});
+				</script>-->
+			</div>
+			
+			<div style="width:100%; opacity: .75; background-color: black; position: absolute; top: 94%; font-size:10; padding:0px; color:white;" class="header">
+				<div class="section" style="width:100%">
 					<button class="play">play</button>
 					<button class="next">next</button>
 					<button class="prev">previous</button>
 				<!--<div style = "float:center;" class="album-title label"></div>
 				<div style = "float:center;" class="artist label"></div>-->
-				<div class="track label"></div>
-			</div>
+				<br><br>
+				<div class="track label" style="width:100%"></div>
+				</div>
     </div>
+	
 			</div>
-						<img id='image2' class='hihi' src='http://www.nasa.gov/images/content/508910main_KOI-72-STILL-6k-3_full_full.jpg' >
+			
+						<img id='image2' class='hihi' style="background-color: black;" >
 	</div>
 
 	
@@ -57,12 +72,13 @@
 	<script>
 	var key=getRandomArbitrary(1,5);
 	var key2=getRandomArbitrary(1,5);
-	var type="Hope";
+	var type="Calm";
+	var type2="Calm";
 	
 	//document.write(key);
 	
 	var source="https://glowing-fire-4366.firebaseio.com/images/"+type+"/"+key;
-	var quoteSource="https://glowing-fire-4366.firebaseio.com/quotes/"+key2;
+	var quoteSource="https://glowing-fire-4366.firebaseio.com/quotes/"+type2+"/"+key2;
 	//document.write(source+"<br>");
 	
 	var dataRef = new Firebase(source);
