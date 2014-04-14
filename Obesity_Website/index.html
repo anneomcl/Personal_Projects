@@ -19,7 +19,7 @@
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
-
+		<script src="js/jquery-1.7.1.min"></script>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
 	<body>
@@ -129,10 +129,36 @@
         <br>
           
           <div class="form-actions">
-            <button type="submit" class="btn btn-success btn-large">Calculate!</button>
-            <button type="reset" class="btn">Reset</button>
+            <button id="calc" type="submit" class="btn btn-success btn-large">Calculate!</button>
+            <button id ="res" type="reset" class="btn">Reset</button>
           </div>
-  
+		  
+		<script>
+			var he= GetUrlValue("height");
+			var we = GetUrlValue("weight");
+			var av = GetUrlValue("avg-miles");
+			var mr = GetUrlValue("miles-reduced");
+			var mon = GetUrlValue("months");
+			
+			
+
+			$(document).ready( function() {
+				$("#calc").click( function() {
+				//equation
+			});
+			});
+		
+			function GetUrlValue(VarSearch){
+			var SearchString = window.location.search.substring(1);
+			var VariableArray = SearchString.split('&');
+			for(var i = 0; i < VariableArray.length; i++){
+			var KeyValuePair = VariableArray[i].split('=');
+			if(KeyValuePair[0] == VarSearch){
+				return KeyValuePair[1];
+				}
+			}
+		}
+		</script>
       </form>
     </div>
   </div>
