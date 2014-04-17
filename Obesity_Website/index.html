@@ -136,30 +136,28 @@
 		<script>
 			
 			
-			$(document).ready(function() {
-				$("#calc").click( function() {
-				var he= GetUrlValue("height");
-				var we = GetUrlValue("weight");
-				var av = GetUrlValue("avg-miles");
-				var mr = GetUrlValue("miles-reduced");
-				var mon = GetUrlValue("months");
-				var ret = we * he; //insert equation here
-				//document.getElementById("wt_chg").text = ret;
-				alert(ret);
-			
-				});
-			});
+			// hook into the form's submit event
+		$("#myForm").submit(function(e) {
+
+			// read the necessary values
+			var height = $("#height").val(); // no parameter => get the value
+			var weight = $("#weight").val();
+			var avg-miles = $("#avg-miles").val();
+			var miles-reduced = $("#miles-reduced").val();
+			var months = $("#months").val();
+
+			// do the calculation and write the output value
+			var calc = calcFunction(height, weight, avg-miles, miles-reduced, months);
+			$("#wt_chg").val(calc); // parameter => set the value
+
+			// prevent form submission
+			e.preventDefault();
+		});
 		
-			function GetUrlValue(VarSearch){
-			var SearchString = window.location.search.substring(1);
-			var VariableArray = SearchString.split('&');
-			for(var i = 0; i < VariableArray.length; i++){
-			var KeyValuePair = VariableArray[i].split('=');
-			if(KeyValuePair[0] == VarSearch){
-				return KeyValuePair[1];
-				}
-			}
+		function calcFunction(a, b, c, d, e){
+			return a;
 		}
+		
 		</script>
       </form>
     </div>
