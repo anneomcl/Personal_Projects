@@ -9,14 +9,6 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="style.css" >
-        <style>
-            body {
-				display:inline-block;
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
 		<script src="js/jquery-1.9.1.min.js"></script>
@@ -78,63 +70,63 @@
 
 		<div class="container">
 			<div class="row-fluid">
-				<div class = "col-md-offset-1 col-md-8">
-					<h5><b>Calculate how changing your transportation habits can affect your weight!</b></h5>
-					<div class = "col-md-offset-2 col-md-8">
-						<form id="calculator" class="form-horizontal" >
-						
-							<div class="form-control-group">
-								<label class="control-label" for="name">Height</label>
-								<div class="controls">
-									<input type="text" class="input-xlarge" name="height" id="height">
-								</div>
-							</div>
-			  
-							<div class="form-control-group">
-								<label class="control-label" for="name">Weight</label>
-								<div class="controls">
-									<input type="text" class="input-xlarge" name="weight" id="weight">
-								</div>
-							</div>
-						  
-							<div class="form-control-group">
-								<label class="control-label" for="name">Miles Driven per Day (on average)</label>
-								<div class="controls">
-									<input type="text" class="input-xlarge" name="avg-miles" id="avg-miles">
-								</div>
-							</div>
-						  
-							<div class="form-control-group">
-								<label class="control-label" for="name">Miles of Alt. Transportation per Day</label>
-								<div class="controls">
-									<input type="text" class="input-xlarge" name="miles-reduced" id="miles-reduced">
-								</div>
-							</div>
-						  
-							<div class="form-control-group">
-								<label class="control-label" for="name">Number of Months</label>
-								<div class="controls">
-									<input type="text" class="input-xlarge" name="months" id="months">
-								</div>
-							</div>
-						  
-						  <!--- Output goes here-->
-							<div class="form-control-group">
-								<label class="control-label" for="name">Total Weight Change</label>
-								<div class="controls">
-									<input class="input-xlarge" name="wt_chg" id="wt_chg">
-								</div>
-							</div>
-							
-						<br>
-						  
-							<div class="form-actions">
-								<button id="calc" type="submit" class="btn btn-success btn-large">Calculate!</button>
-								<button id ="res" type="reset" class="btn">Reset</button>
-							</div>
-						</form>
+			<div class = "col-md-offset-1 col-md-8">
+				<h5><b>Calculate how changing your transportation habits can affect your weight!</b></h5>
+				<div class = "col-md-offset-2 col-md-8">
+				<form id="calculator" class="form-horizontal" >
+					
+					<div class="form-control-group">
+						<label class="control-label" for="name">Height</label>
+						<div class="controls">
+							<input type="text" class="input-xlarge" name="height" id="height">
+						</div>
 					</div>
+		
+					<div class="form-control-group">
+						<label class="control-label" for="name">Weight</label>
+						<div class="controls">
+							<input type="text" class="input-xlarge" name="weight" id="weight">
+						</div>
+					</div>
+					
+					<div class="form-control-group">
+						<label class="control-label" for="name">Miles Driven per Day (on average)</label>
+						<div class="controls">
+							<input type="text" class="input-xlarge" name="avg_miles" id="avg_miles">
+						</div>
+					</div>
+					
+					<div class="form-control-group">
+						<label class="control-label" for="name">Miles of Alt. Transportation per Day</label>
+						<div class="controls">
+							<input type="text" class="input-xlarge" name="miles_reduced" id="miles_reduced">
+						</div>
+					</div>
+					
+					<div class="form-control-group">
+						<label class="control-label" for="name">Number of Months</label>
+						<div class="controls">
+							<input type="text" class="input-xlarge" name="months" id="months">
+						</div>
+					</div>
+					
+					<!--- Output goes here-->
+					<div class="form-control-group">
+						<label class="control-label" for="name">Total Weight Change</label>
+						<div class="controls">
+							<input class="input-xlarge" name="wt_chg" id="wt_chg">
+						</div>
+					</div>
+					
+				<br>
+					
+					<div class="form-actions">
+						<button id="calc" type="submit" class="btn btn-success btn-large">Calculate!</button>
+						<button id ="res" type="reset" class="btn">Reset</button>
+					</div>
+				</form>
 				</div>
+			</div>
 			</div>
 		</div>
 	</body>
