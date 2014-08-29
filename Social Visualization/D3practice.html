@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+	<head>
+		<title> Practice D3 </title>
+		<style type = "text/css">
+
+			.chart div {
+			  font: 10px sans-serif;
+			  background-color: steelblue;
+			  text-align: right;
+			  padding: 3px;
+			  margin: 1px;
+			  color: white;
+			}
+			
+			.chart div:hover{
+				background-color: navy;
+			}
+			
+
+		</style>
+	</head>
+	<body>
+		
+			<div class="chart"></div>
+			<script  type = "text/javascript" src = "http://mbostock.github.com/d3/d3.js"></script>
+			<script type = "text/javascript">
+
+				/*var myFunc = function() {
+					var rect = d3.select(this)
+					rect.transition().duration(500)
+						
+				}*/
+	
+				function animate(){
+					d3.select(this).transition()
+						.delay(0)
+						.duration(500)
+						.style("width", function(d) {return x(d) + 25 + "px";})
+						.each("end", animateEnd);
+				}
+				
+				function animateEnd() {
+					d3.select(this)
+						.transition()
+							.duration(500)
+							.style("width", function(d) {return x(d) - 25 + "px";});
+				}
+			
+				var data = [4, 8, 15, 16, 23, 42,100,1,2,3,4,5,6,7,8,5,4,2,5,75,3,2,1,6,6,8,44,6,55,77,22,11,23,43];
+
+				var x = d3.scale.linear()
+					.domain([0, d3.max(data)]) //scale x-axis based on largest entry
+					.range([0, 420]); //scaling value
+
+				d3.select(".chart")
+				  .selectAll("div")
+					.data(data)
+					.enter()
+					.append("div")
+						.style("width", function(d) { return x(d) + "px"; })
+						.text(function(d) { return d; })
+						.on("mousedown", animate);
+					
+			</script>
+	</body>
+</html>
